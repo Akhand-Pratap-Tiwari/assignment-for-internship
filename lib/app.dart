@@ -14,8 +14,10 @@ class MyApp extends StatelessWidget {
         primaryColor: Colors.amber,
         inputDecorationTheme: const InputDecorationTheme(
           isDense: true,
+          fillColor: Colors.white10,
+          filled: true,
           border: OutlineInputBorder(
-            borderRadius: BorderRadius.all(Radius.circular(8.0)),
+            borderRadius: BorderRadius.all(Radius.circular(16.0)),
           ),
         ),
         floatingActionButtonTheme: const FloatingActionButtonThemeData(

@@ -1,4 +1,5 @@
-import 'package:firebase_auth/firebase_auth.dart' hide PhoneAuthProvider;
+import 'package:firebase_auth/firebase_auth.dart'
+    hide PhoneAuthProvider, EmailAuthProvider;
 import 'package:firebase_ui_oauth_google/firebase_ui_oauth_google.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_ui_auth/firebase_ui_auth.dart';
@@ -13,8 +14,7 @@ class AuthGate extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     List<AuthProvider<AuthListener, AuthCredential>>? providers = [
-      GoogleProvider(clientId: googleClientId),
-      PhoneAuthProvider(),
+      EmailAuthProvider(),
     ];
     return StreamBuilder<User?>(
         stream: FirebaseAuth.instance.authStateChanges(),
@@ -64,6 +64,10 @@ class AuthGate extends StatelessWidget {
                             ),
                           ),
                         ),
+                        GoogleSignInButton(
+                          loadingIndicator: CircularProgressIndicator(),
+                          clientId: googleClientId,
+                        ),
                         PhoneVerificationButton(label: "Sign In With Phone"),
                       ],
                     ),
@@ -81,7 +85,7 @@ class AuthGate extends StatelessWidget {
               // },
             );
           }
-          
+
           return const HomeScreen();
         });
   }

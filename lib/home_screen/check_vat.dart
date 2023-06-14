@@ -10,21 +10,6 @@ class CheckVAT extends StatefulWidget {
   State<CheckVAT> createState() => _CheckVATState();
 }
 
-// {
-//     "vat_number": "SE556656688001",
-//     "valid": true,
-//     "company": {
-//         "name": "GOOGLE SWEDEN AB",
-//         "address": "GOOGLE IRLAND LTD
-//           M COLLINS, GORDON HOUSE
-//           BARROW STREET, DUBLIN 4
-//           IRLAND"
-//     },
-//     "country": {
-//         "code": "SE",
-//         "name": "Sweden"
-//     }
-// }
 class VAT {
   final String vatNumber;
   final bool valid;

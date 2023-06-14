@@ -11,18 +11,20 @@ class MyApp extends StatelessWidget {
       title: 'Assignment',
       debugShowCheckedModeBanner: true,
       theme: ThemeData.dark(useMaterial3: true).copyWith(
-        primaryColor: Colors.amber,
+        dividerTheme: DividerThemeData(color: Colors.transparent),
+        colorScheme: ColorScheme.dark(
+          primary: Colors.teal,
+          onPrimary: Colors.white,
+        ),
         inputDecorationTheme: const InputDecorationTheme(
           isDense: true,
-          fillColor: Colors.white10,
           filled: true,
+          fillColor: Colors.white10,
           border: OutlineInputBorder(
-            borderRadius: BorderRadius.all(Radius.circular(16.0)),
+            borderRadius: BorderRadius.all(
+              Radius.circular(8.0),
+            ),
           ),
-        ),
-        floatingActionButtonTheme: const FloatingActionButtonThemeData(
-          extendedTextStyle:
-              TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
         ),
       ),
       home: const AuthGate(),

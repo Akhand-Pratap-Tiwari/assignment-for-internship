@@ -141,9 +141,9 @@ class MyCard extends StatelessWidget {
             Text("VAT Number : ${vat.vatNumber}"),
             Text("Valid : ${vat.valid ? 'Yes' : 'No'}"),
             Text("Company Name : ${vat.company['name']}"),
-            Text("Company Address : + ${vat.company['address']}"),
-            Text("Country Code : + ${vat.country['code']}"),
-            Text("Country Name : + ${vat.country['name']}"),
+            Text("Company Address : ${vat.company['address']}"),
+            Text("Country Code : ${vat.country['code']}"),
+            Text("Country Name : ${vat.country['name']}"),
 //     "company": {
 //         "name": "GOOGLE SWEDEN AB",
 //         "address": "GOOGLE IRLAND LTD

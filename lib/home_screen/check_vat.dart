@@ -113,8 +113,6 @@ class _CheckVATState extends State<CheckVAT> {
                 } else if (snapshot.hasError) {
                   return Text('${snapshot.error}');
                 }
-
-                // By default, show a loading spinner.
                 return Container();
               },
               future: vatDetails,
@@ -144,17 +142,6 @@ class MyCard extends StatelessWidget {
             Text("Company Address : ${vat.company['address']}"),
             Text("Country Code : ${vat.country['code']}"),
             Text("Country Name : ${vat.country['name']}"),
-//     "company": {
-//         "name": "GOOGLE SWEDEN AB",
-//         "address": "GOOGLE IRLAND LTD
-//           M COLLINS, GORDON HOUSE
-//           BARROW STREET, DUBLIN 4
-//           IRLAND"
-//     },
-//     "country": {
-//         "code": "SE",
-//         "name": "Sweden"
-//     }
           ],
         ),
       ],

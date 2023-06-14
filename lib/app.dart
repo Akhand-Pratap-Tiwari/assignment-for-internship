@@ -11,8 +11,8 @@ class MyApp extends StatelessWidget {
       title: 'Assignment',
       debugShowCheckedModeBanner: true,
       theme: ThemeData.dark(useMaterial3: true).copyWith(
-        dividerTheme: DividerThemeData(color: Colors.transparent),
-        colorScheme: ColorScheme.dark(
+        dividerTheme: const DividerThemeData(color: Colors.transparent),
+        colorScheme: const ColorScheme.dark(
           primary: Colors.teal,
           onPrimary: Colors.white,
         ),

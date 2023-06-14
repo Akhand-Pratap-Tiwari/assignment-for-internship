@@ -15,7 +15,7 @@ class HomeScreen extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text("Finance"),
+        title: const Text("Finance"),
         centerTitle: true,
       ),
       drawer: BackdropFilter(
@@ -25,10 +25,10 @@ class HomeScreen extends StatelessWidget {
             child: Column(
               children: [
                 UserAccountsDrawerHeader(
-                  margin: EdgeInsets.all(16.0),
+                  margin: const EdgeInsets.all(16.0),
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(16),
-                    gradient: LinearGradient(
+                    gradient: const LinearGradient(
                       colors: [Colors.cyan, Colors.teal],
                       stops: [0, 1],
                       begin: Alignment.topRight,
@@ -42,16 +42,16 @@ class HomeScreen extends StatelessWidget {
                         "https://img.freepik.com/premium-vector/cute-astronaut-cat-floating-space_482416-161.jpg?w=2000"),
                   ),
                 ),
-                ListTile(leading: Icon(Icons.home), title: Text("Home")),
-                ListTile(leading: Icon(Icons.share), title: Text("Share")),
-                ListTile(leading: Icon(Icons.help), title: Text("Help")),
-                SignOutButton(),
+                const ListTile(leading: Icon(Icons.home), title: Text("Home")),
+                const ListTile(leading: Icon(Icons.share), title: Text("Share")),
+                const ListTile(leading: Icon(Icons.help), title: Text("Help")),
+                const SignOutButton(),
               ],
             ),
           ),
         ),
       ),
-      body: CheckVAT(),
+      body: const CheckVAT(),
     );
   }
 }

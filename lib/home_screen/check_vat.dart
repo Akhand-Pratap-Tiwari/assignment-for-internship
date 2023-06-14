@@ -3,6 +3,8 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
+import '../keys/keys.dart';
+
 class CheckVAT extends StatefulWidget {
   const CheckVAT({super.key});
 
@@ -35,7 +37,7 @@ class VAT {
 class _CheckVATState extends State<CheckVAT> {
   Future<VAT> getVAT({String number = "SE556656688001"}) async {
     final response = await http.get(Uri.parse(
-        'https://vat.abstractapi.com/v1/validate/?api_key=e2363219a2ab499d83858612d6732cbc&vat_number=$number'));
+        'https://vat.abstractapi.com/v1/validate/?api_key=${myKey}&vat_number=$number'));
 
     if (response.statusCode == 200) {
       return VAT.fromJson(jsonDecode(response.body));
